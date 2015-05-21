@@ -13,10 +13,12 @@ MAINTAINER David Kunzmann
 # the image file system. This is NOT a shared folder!
 #
 #COPY frontendapp /app
-#ADD ./frontendapp /app
+#ADD ./frontendapp /app 
 COPY frontendapp/ /var/www/html/
+
 #
 # With RUN, we can execute commands when we create the image. Here,
 # we install the PM2 process manager
 #
 #RUN apt-get install vim
+

@@ -9,3 +9,9 @@ FROM httpd:2.4
 # the image file system. This is NOT a shared folder!
 #
 COPY ./src/ /usr/local/apache2/htdocs/
+
+CMD  cat ./conf/reverseproxy.conf >> /conf/httpd.conf
+
+
+
+RUN apt-get update && apt-get install libapache2-mod-proxy-html && apt-get install a2enmod && apt-get install mod_proxy
